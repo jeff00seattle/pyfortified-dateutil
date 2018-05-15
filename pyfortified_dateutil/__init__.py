@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 __title__ = 'pyfortified-dateutil'
-__version__ = '0.1.0'
+__version__ = '0.1.1'
 __version_info__ = tuple(__version__.split('.'))
 
 
@@ -74,7 +74,7 @@ def dates_month_first_last(month_date, date_format="%Y-%m-%d"):
 
     _month_date = None
     if isinstance(month_date, str):
-        _month_date = dt.datetime.strptime(date_string=month_date, format=date_format)
+        _month_date = dt.datetime.strptime(month_date, date_format)
     elif isinstance(month_date, dt.datetime):
         _month_date = month_date.date()
     elif isinstance(month_date, dt.date):
